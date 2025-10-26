@@ -1,0 +1,2 @@
+# equipment_linkage_cos
+基于MQTT数据解析的设备联动平台
