@@ -93,6 +93,11 @@ public class DeviceInfo implements Serializable {
      */
     private String address;
 
+    /**
+     * 设备功率
+     */
+    private Integer power;
+
     @TableField(exist = false)
     private String deviceName;
 

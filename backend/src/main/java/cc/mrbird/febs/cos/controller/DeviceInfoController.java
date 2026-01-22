@@ -51,6 +51,39 @@ public class DeviceInfoController {
     }
 
     /**
+     * 查询用户用电量
+     *
+     * @param userId 用户ID
+     * @return 结果
+     */
+    @GetMapping("/queryElectricityRateByUser")
+    public R queryElectricityRateByUser(Integer userId) {
+        return R.ok(deviceInfoService.queryElectricityRateByUser(userId));
+    }
+
+    /**
+     * 查询设备用电电量历史
+     *
+     * @param deviceId 设备ID
+     * @return 结果
+     */
+    @GetMapping("/queryDeviceElectricityHistory")
+    public R queryDeviceElectricityHistory(Integer deviceId) {
+        return R.ok(deviceInfoService.queryDeviceElectricityHistory(deviceId));
+    }
+
+    /**
+     * 预测设备用电
+     *
+     * @param deviceId 设备ID
+     * @return 结果
+     */
+    @GetMapping("/queryDeviceElectricityFuture")
+    public R queryDeviceElectricityFuture(Integer deviceId) {
+        return R.ok(deviceInfoService.queryDeviceElectricityFuture(deviceId));
+    }
+
+    /**
      * 根据用户获取设备信息
      *
      * @param userId 用户ID
